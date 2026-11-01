@@ -9,7 +9,7 @@ This workflow first demultiplexes pooled high-throughput sequencing reads using 
 - A pooled R1 FASTQ file and a barcode definition file. The example `metadata/barcodes.csv` uses generic sample names; replace it or set `BARCODES` to the appropriate file for each batch.
 - The confirmed upstream target sequence and the desired TAM length.
 
-Run the following commands from the `01_TAM_analysis` folder. The recorded PE150 analysis used R1 only. Raw and demultiplexed reads are not included in this folder.
+Run the following commands from the `01_TAM_analysis` folder. The recorded PE150 analysis used R1 only. The script reads pooled R1 data; paired R2 reads are not used by this demultiplexing command.
 
 ## 1. Demultiplex reads
 
@@ -42,4 +42,4 @@ Repeat with each sample's actual demultiplexed filename and a separate CSV outpu
 
 For each read, the script finds the first exact occurrence of the uppercased target and counts the following `length` bases. It skips reads containing characters outside `ATCGN` and extracted sequences containing `N`. Read sequences are not converted to uppercase. The output columns are `Subsequence`, `Count`, and `Proportion`; proportion is the count divided by all retained counts, formatted to six decimal places. The script does not calculate enrichment between samples.
 
-The exact target sequence and command used for the historical 525 mix result tables were not recorded in the source directory; reproduction of those tables remains unverified. The counting logic is unchanged from the original `find_pam.py`; the file was renamed and its comments were translated to English.
+The historical 525 mix target sequence is absent from the source directory. The counting logic is unchanged from the original `find_pam.py`; the file was renamed and its comments were translated to English.
