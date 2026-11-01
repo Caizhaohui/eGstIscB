@@ -1,0 +1,45 @@
+# Internal task state
+.omo/
+# Sequencing data and intermediate alignments
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
+*.fai
+*.mmi
+*.bwt
+*.pac
+*.sa
+# Runtime artifacts and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+*.log
+*.err
+*.out
+*.tmp
+*.swp
+.env
+.env.*
+# Work directories; retain documented small derived inputs in tracked workflow trees
+/data/
+/work/
+/tmp/
+/cache/
+
+# Tiny authored synthetic test fixtures, not experimental reads
+!workflows/23_I395erdaimix/tools/mutaa/tests/fixtures/toy_R1.fq.gz
+!workflows/23_I395erdaimix/tools/mutaa/tests/fixtures/toy_R2.fq.gz
+
+# Local historical visualization folder
+/I325Y2/
