@@ -13,4 +13,4 @@ Each workflow README lists input formats, software, commands, outputs and calcul
 
 The protein analysis folder contains minibwa visualizations and a separate local workflow for log2 fold-change heatmaps and fragment-level coverage. Their input tables and coverage rules differ; the READMEs describe those calculation paths separately.
 
-The folders contain scripts, example metadata and reference sequences. Raw FASTQ reads and large intermediate files are stored separately. The local `I325Y2/` folder contains supporting visualization material and is excluded from this repository.
+The folders contain scripts, example metadata and reference sequences. Raw FASTQ reads and large intermediate files are stored separately. 
